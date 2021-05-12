@@ -1,12 +1,11 @@
 {
   "name": "day3",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "riham",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -19,5 +18,6 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.3",
     "pug": "^3.0.2"
-  }
+  },
+  "description": ""
 }
