@@ -7,11 +7,9 @@ const PostSchema = new mongoose.Schema({
   tags: { type: [String], min: 13 },
 });
 
-// created_at: {type: Date, default: Date.now()},
-// updated_at: {type: Date},
 
 PostSchema.statics.get_user_posts = function get_user_posts(UserId) {
-  // console.log(this.findById(userId))
+
   return this.where({ UserId });
 };
 

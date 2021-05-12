@@ -1,14 +1,12 @@
 const express = require("express");
 const PostRoute = express();
-// const PostRoute = express.Router();
+
 
 const bodyParser = require("body-parser");
-// app.set('view engine', 'ejs')
 
-// ############################# User Model ###############################
 const Post = require("../models/PostModel");
 
-// ######################### User Validation ##############################
+
 const PostSchema = require("../validation/PostValidation.js");
 const validator = require("express-joi-validation").createValidator({});
 
@@ -31,9 +29,6 @@ PostRoute.post("/create", validator.body(PostSchema), (req, res) => {
   res.send(UserId + " - " + title + " - " + body + " - " + tags);
 });
 
-// PostRoute.patch('/:id', (req, res) => {
-
-// })
 
 PostRoute.delete("/:id", async (req, res, next) => {
   await Post.findByIdAndRemove(req.params.id, (err, item) => {
